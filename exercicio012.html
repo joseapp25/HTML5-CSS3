@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon-html.ico" type="image/x-icon">
+    <title>Seletores Personalizados</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+div {
+    display: inline-block;
+    background-color: rgb(187, 187, 187);
+    border: 3px solid rgb(41, 41, 41);
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+}
+
+div:hover {
+    background-color: rgb(160, 5, 5);
+
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:visited {
+    color: darkred;
+
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+a:active {
+    font-weight: bolder;
+}
+
+a::after {
+    content: ' [link]←';
+    font-weight: normal;
+    text-decoration: none;
+    color: grey;
+}
+
+a::before {
+    content: '→';
+}
+.basico {
+    color:  rgb(0, 97, 0);
+    text-align: justify;
+}
+
+.intermediario {
+    color:  rgb(88, 88, 0);
+    text-align: justify;
+}
+
+.avancado {
+    color:  rgb(90, 0, 0);
+    text-align: justify;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome, adventurer!</h1>
+    </header>
+    <main>
+        <h1>Seletores Personalizados</h1>
+            <h2>Criando Seletores usando <mark>id</mark></h2>
+                <p id="extenso">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid reprehenderit, voluptatum amet eum tempora praesentium nesciunt quas dicta expedita officiis voluptate suscipit voluptatem explicabo ut incidunt doloribus tempore magni nulla! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto sapiente quisquam, ipsum, ab exercitationem eos voluptatem esse tempora corporis saepe dignissimos ipsam enim ducimus itaque quaerat, minima debitis suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sed, mollitia cumque dolor perspiciatis, sequi numquam temporibus nostrum repellat officia quis magni doloremque expedita? Commodi consectetur aspernatur amet nisi iste.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam ipsa iusto, voluptate soluta aut repellendus inventore, excepturi at possimus repudiandae doloribus nisi nulla ipsam in voluptatem officia et atque ea. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut placeat assumenda voluptatum, laborum sed aliquam unde illum rem sit repellendus, alias delectus obcaecati doloribus esse, consequuntur perspiciatis! Ipsa, itaque laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cum eligendi totam cumque illo repudiandae, explicabo enim nulla voluptas veritatis iure sed molestiae aut voluptate laudantium amet, quibusdam consectetur odit.</p>
+            <h2>Criando Seletores usando <mark>class</mark></h2>
+                <h3 class="basico">Nível Básico</h3>
+                    <p class="basico">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo officiis quo iure, est, sit delectus itaque pariatur facere, laudantium ea aut perspiciatis voluptates tempora voluptatibus minima animi repellat minus aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo beatae, deserunt non a accusantium corporis cumque quaerat animi suscipit illo minus veniam praesentium fuga iste totam voluptates ullam minima maxime! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum architecto rerum sit provident placeat quidem assumenda itaque a. Aliquam sed, inventore vitae voluptatum eligendi beatae ratione facere nemo consectetur excepturi?</p>
+                <h3 class="intermediario">Nível Intermediário</h3>
+                    <p class="intermediario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores officia ullam corporis? Aliquam doloribus ipsa dolorum sint aliquid obcaecati voluptas molestias voluptatibus officiis! Laboriosam modi fugit odit, nulla expedita iste? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fuga omnis dignissimos, excepturi saepe veritatis accusamus atque a maxime soluta facilis necessitatibus voluptatem rerum laborum numquam odio iste. Nihil, temporibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptate quia, beatae molestiae inventore in atque minima cumque sit, a, fugit doloribus laborum ea sequi perspiciatis fugiat qui. Delectus, quae.</p>
+                <h3 class="avancado">Nível Avançado</h3>
+                    <p class="avancado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ipsam quia expedita ex eligendi assumenda totam vero maiores distinctio modi nemo similique beatae facere odit quaerat aliquid quisquam, sequi ullam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis blanditiis vero, obcaecati rerum minima ex repudiandae est debitis eius ducimus ea eveniet ipsa natus corporis atque voluptatibus ad consectetur in! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iure fugit maxime. Suscipit assumenda atque tenetur cum cumque corrupti vero eum. Iure iusto reiciendis asperiores molestias nobis porro debitis aliquid!</p>
+            <h2>Pseudo Classes</h2>
+                <div>01</div>
+                <div>02</div>
+                <div>03</div>
+            <h2>Pseudo Elementos</h2>
+                <ul>
+                    <li><a href="https://dictionary.cambridge.org/dictionary/english/" target="_blank" rel="external">Cambridge Dictionary</a></li>
+                    <li><a href="https://www.urbandictionary.com" target="_blank" rel="external">Urban Dictionary</a></li>
+                    <li><a href="https://www.thesaurus.com" target="_blank" rel="external">Thesaurus</a></li>
+                    <li><a href="https://conjugator.reverso.net/conjugation-english.html" target="_blank" rel="external">Reverso Conjugator</a></li>
+                </ul>
+        <hr>
+            <p class="anchorfinal"><a href="index.html" target="_self" rel="prev">Voltar para o Index</a></p>
+    </main>
+    <footer>
+        <p>Desenvolvido por JAPP IDIOMAS LTDA. &trade;</p>
+        <p>Todos os Direitos Reservados. &copy;</p>
+    </footer>
+</body>
+</html>
