@@ -7,6 +7,13 @@
     <title>Imagens de Fundo</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            background-image: url(https://raw.githubusercontent.com/gustavoguanabara/html-css/refs/heads/master/imagens/mascote.png);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 300px;
+        }
+
         main {
             background-image: url(imagens/wallpaper001.jpg);
         }
@@ -31,6 +38,37 @@
         div#q3 {
             background-image: url('imagens/pattern003.png');
         }
+
+        div.bloco {
+            background-image: url(imagens/wallpaper003.jpg);
+            height: 200px;
+            border: solid black;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        div#b1 {
+            background-position: left top;
+        }
+
+        div#b2 {
+            background-position: left center;
+        }
+
+        div#b3 {
+            background-position: right bottom;
+        }
+
+        div#b4 {
+            background-position: center center;
+        }
+
+        p#obs {
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 2px 2px 2px black;
+        }
     </style>
 </head>
 <body>
@@ -47,6 +85,21 @@
         <div class="quadrado" id="q3">
 
         </div>
+            <aside>
+                <div class="bloco" id="b1">
+                    
+                </div>
+                <div class="bloco" id="b2">
+                    
+                </div>
+                <div class="bloco" id="b3">
+                    
+                </div>
+                <div class="bloco" id="b4">
+                    
+                </div>
+            </aside>
+        <p id="obs">Observações da Aula: na TAG background position, primeiro vem as <mark>colunas</mark>, <mark>columns</mark>, e depois as <mark>linhas</mark>, <mark>rows</mark>.</p>
         <hr>
             <p class="anchorfinal"><a href="index.html" target="_self" rel="prev">Voltar para o Index</a></p>
     </main>
