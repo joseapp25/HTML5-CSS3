@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon-html.ico" type="image/x-icon">
+    <title>Alinhamento Vertical</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #container {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            position: relative;
+            height: 95vh;
+            padding: 20px;
+            background-color: blueviolet;
+        }
+
+        #conteudo {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: orangered;
+
+            left: 50%;
+            top: 50%;
+
+            translate: -50% -50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome, adventurer!</h1>
+    </header>
+    <main>
+        <section id="container">
+            <article id="conteudo">
+
+            </article>
+        </section>
+        <hr>
+            <p class="anchorfinal"><a href="index.html" target="_self" rel="prev">Voltar para o Index</a></p>
+    </main>
+    <footer>
+        <p>Desenvolvido por JAPP IDIOMAS LTDA. &trade;</p>
+        <p>Todos os Direitos Reservados. &copy;</p>
+        <div>
+            <img src="imagens/branding-info.png" alt="Logo Teacher Zé Antonio">
+        </div>
+    </footer>
+</body>
+</html>
