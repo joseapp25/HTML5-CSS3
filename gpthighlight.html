@@ -45,11 +45,11 @@
 
             document.querySelectorAll(".highlight").forEach(el => el.classList.remove("highlight"));
 
-            if (currentTime >= 0 && currentTime < 2.5) {
+            if (currentTime >= 0.2 && currentTime < 1.8) {
                 document.getElementById("word1").classList.add("highlight");
-            } else if (currentTime >= 3.0 && currentTime < 4.5) {
+            } else if (currentTime >= 1.8 && currentTime < 4.8) {
                 document.getElementById("word2").classList.add("highlight");
-            } else if (currentTime >= 4.5 && currentTime < 6.0) {
+            } else if (currentTime >= 4.8 && currentTime < 6.0) {
                 document.getElementById("word3").classList.add("highlight");
             }
         });
