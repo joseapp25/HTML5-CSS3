@@ -34,29 +34,27 @@
     </audio>
 
     <p class="text-container">
-        <span id="word1"><strong>Sara:</strong> Hi John. How are you?</span>,<br>
-        <span id="word2"><strong>John:</strong> Hi Sara. I'm good, thanks. How about you?</span><br>
-        <span id="word3"><strong>Sara:</strong>I'm great!</span>
+        <strong>Sara: </strong><span id="word1">Hi John. How are you?</span><br>
+        <strong>John: </strong><span id="word2">Hi Sara. I'm good, thanks. How about you?</span><br>
+        <strong>Sara: </strong><span id="word3">I'm great!</span>
     </p>
 
     <script>
         document.getElementById("audio").addEventListener("timeupdate", function() {
             let currentTime = this.currentTime;
 
-            // Clear previous highlights
             document.querySelectorAll(".highlight").forEach(el => el.classList.remove("highlight"));
 
-            // Time ranges for each word
-            if (currentTime >= 0 && currentTime < 0.8) {
+            if (currentTime >= 0 && currentTime < 2.5) {
                 document.getElementById("word1").classList.add("highlight");
-            } else if (currentTime >= 1.0 && currentTime < 5.0) {
+            } else if (currentTime >= 3.0 && currentTime < 4.5) {
                 document.getElementById("word2").classList.add("highlight");
-            } else if (currentTime >= 5.5 && currentTime < 6.5) {
+            } else if (currentTime >= 4.5 && currentTime < 6.0) {
                 document.getElementById("word3").classList.add("highlight");
-            } else if (currentTime >= 6.5 && currentTime < 8.5) {
-                document.getElementById("word4").classList.add("highlight");
             }
         });
+
+        audio.addEventListener("ended", clearHighlights);
     </script>
 
 </body>
