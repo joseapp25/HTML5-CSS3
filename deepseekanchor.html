@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Link with Thumbnail</title>
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .bookmark-container {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .custom-bookmark {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            border: 1px solid #333;
+            transition-duration: 0.3s;
+            border-radius: 3px;
+        }
+
+        .custom-bookmark:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .bookmark-thumbnail {
+            width: 150px;
+            height: auto;
+            margin: 5px;
+            border-radius: 3px;
+        }
+
+        .bookmark-title {
+            font-size: 1em;
+            margin-right: 10px;
+            margin-left: 5px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="bookmark-container">
+        <a href="https://play.max.com/video/watch/6b219af3-e68a-4444-a7a6-62cf187140c6/17f7e7ab-1d14-40c1-ac08-f9c64796960a" class="custom-bookmark" target="_blank">
+            <img src="imagens/s01-e02-bbt-thumbail.jpeg" alt="Thumbnail" class="bookmark-thumbnail">
+            <span class="bookmark-title">S01 E02: The Big Bran Hypothesis</span>
+        </a>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
