@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Popup</title>
+    <style>
+
+            .word {
+                color: blue;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            .popup {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: white;
+                padding: 20px;
+                border: 1px solid #ccc;
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+                z-index: 1000;
+            }
+
+            .popup-content {
+                text-align: center;
+            }
+
+            #close {
+                cursor: pointer;
+                float: right;
+                font-size: 20px;
+            }
+
+    </style>
+</head>
+<body>
+
+    <p><span class="word" data-translation="cachorro" data-example="I have a dog." data-example="They have a three dogs.">dog</span>.</p>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="close">&times;</span>
+            <h3 id="word"></h3>
+            <p><strong>Translation:</strong> <span id="translation"></span></p>
+            <p><strong>Example:</strong> <span id="example"></span></p>
+        </div>
+    </div>
+
+    <p><span class="word" data-translation="gato" data-example="She has a cat. We are allergic to cat's fur.">cat</span>.</p>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="close">&times;</span>
+            <h3 id="word"></h3>
+            <p><strong>Translation:</strong> <span id="translation"></span></p>
+            <p><strong>Example:</strong> <span id="example"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+
+        document.querySelectorAll('.word').forEach(word => {
+            word.addEventListener('click', function() {
+                document.getElementById('word').textContent = this.textContent;
+                document.getElementById('translation').textContent = this.getAttribute('data-translation');
+                document.getElementById('example').textContent = this.getAttribute('data-example');
+                document.getElementById('popup').style.display = 'block';
+            });
+        });
+
+        document.getElementById('close').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none';
+        });
+
+    </script>
+
+</body>
+</html>
