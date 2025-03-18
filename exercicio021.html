@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon-html.ico" type="image/x-icon">
+    <title>Agrupando Colunas</title>
+    <style>
+
+        table {
+            border-collapse: collapse;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 1000px;
+        }
+        
+        th, td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border: 1px solid black;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        td {
+            text-align: left;
+        }
+
+        caption {
+            padding: 20px;
+            background-color: gray;
+            color: white;
+            border: 1px solid black;
+            border-bottom: none;
+        }
+
+        .infinitive {
+            background-color: #CBDCF6;
+        }
+
+        .third-person {
+            background-color: #A7C5F1;
+        }
+
+        .preterite {
+            background-color: #84ADEB;
+        }
+
+        .past-participle {
+            background-color: #6196E5;
+        }
+
+        .present-participle {
+            background-color: #3E7EE0;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome, adventurer!</h1>
+    </header>
+
+    <main>
+        
+        <table>
+
+            <colgroup>
+                <col class="infinitive">
+                <col class="third-person">
+                <col class="preterite">
+                <col class="past-participle">
+                <col class="present-participle">
+            </colgroup>
+
+            <caption>Irregular Verbs</caption>
+
+            <thead>
+                <th scope="col">Infinitive</th>
+                <th scope="col">3rd Person</th>
+                <th scope="col">Preterite</th>
+                <th scope="col">Past Participle</th>
+                <th scope="col">Present Participle</th>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>to take</td>
+                    <td>takes</td>
+                    <td>took</td>
+                    <td>taken</td>
+                    <td>taking</td>
+                </tr>
+
+                <tr>
+                    <td>to run</td>
+                    <td>runs</td>
+                    <td>ran</td>
+                    <td>run</td>
+                    <td>running</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <hr>
+            <p class="anchorfinal"><a href="index.html" target="_self" rel="prev">Voltar para o Index</a></p>
+    </main>
+    <footer>
+        <p>Desenvolvido por JAPP IDIOMAS LTDA. &trade;</p>
+        <p>Todos os Direitos Reservados. &copy;</p>
+    </footer>
+</body>
+</html>
