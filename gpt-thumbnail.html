@@ -1,39 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Thumbnail</title>
+    <title>YouTube Thumbnails</title>
 </head>
 <body>
 
-    <a id="video-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-        <img id="video-thumbnail" alt="Video Thumbnail">
+    <a class="video-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+        <img class="video-thumbnail" alt="Video Thumbnail">
+    </a>
+
+    <a class="video-link" href="https://www.youtube.com/watch?v=rgQHJfl8w94" target="_blank">
+        <img class="video-thumbnail" alt="Video Thumbnail">
+    </a>
+
+    <a class="video-link" href="https://www.youtube.com/watch?v=M7BWHPtV1qM" target="_blank">
+        <img class="video-thumbnail" alt="Video Thumbnail">
     </a>
 
     <script>
-        // Function to extract YouTube video ID
         function getYouTubeID(url) {
             const regExp = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
             const match = url.match(regExp);
             return match ? match[1] : null;
         }
 
-        // Set thumbnail dynamically
-        function setYouTubeThumbnail() {
-            const videoLink = document.getElementById("video-link");
-            const videoThumbnail = document.getElementById("video-thumbnail");
-            const videoURL = videoLink.href;
-            const videoID = getYouTubeID(videoURL);
+        function setYouTubeThumbnails() {
+            const videoLinks = document.querySelectorAll(".video-link");
 
-            if (videoID) {
-                videoThumbnail.src = `https://img.youtube.com/vi/${dQw4w9WgXcQ}/maxresdefault.jpg`;
-            } else {
-                console.error("Invalid YouTube URL");
-            }
+            videoLinks.forEach(link => {
+                const videoURL = link.href;
+                const videoID = getYouTubeID(videoURL);
+                const img = link.querySelector(".video-thumbnail");
+
+                if (videoID) {
+                    img.src = `https://img.youtube.com/vi/${videoID}/maxresdefault.jpg`;
+                } else {
+                    console.error("Invalid YouTube URL:", videoURL);
+                }
+            });
         }
 
-        setYouTubeThumbnail();
+        setYouTubeThumbnails();
     </script>
 
 </body>
