@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com o DOM III</title>
+    <style>
+        div#area {
+            background-color: darkblue;
+            font-size: 30px;
+            color: white;
+            height: 400px;
+            width: 400px;
+            text-align: center;
+            line-height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Interaja</div>
+    <script>
+            var a = window.document.getElementById('area')
+        function clicar() {
+            a.innerText = 'Clicou!'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!'
+        }
+
+        //EVENTOS DOM
+
+            //MOUSE EVENTS
+                //mouseenter
+                //mouseout
+                //mousemove
+                //mousedown
+                //mouseup
+                //click
+
+            //TOUCH EVENTS
+    </script>
+</body>
+</html>
