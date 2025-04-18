@@ -26,6 +26,11 @@
             box-shadow: 2px 2px 5px rgba(88, 87, 87, 0.5)
         }
 
+        div {
+            text-align: center;
+            margin: 20px;
+        }
+
         footer {
             color: #fafafa;
             text-align: center;
@@ -34,7 +39,7 @@
 
     </style>
 </head>
-<body>
+<body onload="carregar()">
     
     <header>
 
@@ -45,11 +50,11 @@
     <section>
 
         <div id="msg">
-
+            -
         </div>
 
         <div id="foto">
-            <img id="imagem" src="" alt="paisagem dia">
+            <img id="img" alt="foto paisagem">
         </div>
 
     </section>
@@ -59,7 +64,24 @@
     </footer>
 
     <script>
+        function carregar() {
+            var msg = window.document.getElementById('msg')
+            var img = window.document.getElementById('img')
+            var data = new Date()
+            var hora = data.getHours()
+            msg.innerHTML = `Agora são ${hora} horas.`
+            if (hora >= 0 && hora < 12) {
+                img.src = 'imagens/manha.jpg'
+                window.document.body.style.background = 'blue'
+            } else if (hora >= 12 && hora < 18) {
+                img.src = 'imagens/tarde.jpg'
+                window.document.body.style.background = 'orange'
+            } else {
+                img.src = 'imagens/noite.jpg'
+                window.document.body.style.background = 'purple'
+            }
 
+        }
     </script>
 
 </body>
