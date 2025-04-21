@@ -31,6 +31,14 @@
             margin: 20px;
         }
 
+        img {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
         footer {
             color: #fafafa;
             text-align: center;
@@ -68,9 +76,12 @@
             </p>
         </div>
 
-
         <div id="res">
             Preenchar os dados acima para ver o resultado!
+        </div>
+
+        <div>
+
         </div>
 
     </section>
@@ -93,14 +104,35 @@
                 var idade = ano - Number(fano.value)
                 res.innerHTML = `idade calculada: ${idade}`
                 var gênero = ''
+                var img = document.createElement('img')
+                img.setAttribute('id', 'foto')
                 if (fsex[0].checked) {
                     gênero = 'Homem'
+                    if (idade >= 0 && idade < 10) {
+                        img.setAttribute('src', 'child-man.png')
+                    } else if (idade < 21) {
+                        img.setAttribute('src', 'teenager-man.png')
+                    } else if (idade < 60) {
+                        img.setAttribute('src', 'adult-man.png')
+                    } else {
+                        img.setAttribute('src', 'elderly-man.png')
+                    }
                 } else if (fsex[1].checked) {
                     gênero = 'Mulher'
+                    if (idade >= 0 && idade < 10) {
+                        img.setAttribute('src', 'child-woman.png')
+                    } else if (idade < 21) {
+                        img.setAttribute('src', 'teenager-woman.png')
+                    } else if (idade < 60) {
+                        img.setAttribute('src', 'adult-woman.png')
+                    } else {
+                        img.setAttribute('src', 'elderly-woman.png')
+                    }
                 }
                 res.innerHTML = `Detectamos ${gênero} com ${idade} anos.`
+                res.appendChild(img)
             }
-                
+
 
         }
     </script>
