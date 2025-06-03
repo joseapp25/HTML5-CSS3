@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dialogue with Translations</title>
+  <style>
+    .translation {
+      color: transparent;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    .translation.visible {
+      color: black;
+    }
+
+    .translation::before {
+      content: "(translation) ";
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <p>
+    <strong>John:</strong> Hello! How are you?<br>
+    <span class="translation">Olá! Como vai você?</span>
+  </p>
+
+  <p>
+    <strong>Mary:</strong> I'm good, thanks!<br>
+    <span class="translation">Estou bem, obrigada!</span>
+  </p>
+
+  <script>
+    const translations = document.querySelectorAll('.translation');
+
+    translations.forEach(el => {
+      el.addEventListener('click', () => {
+        el.classList.toggle('visible');
+      });
+    });
+  </script>
+
+</body>
+</html>
