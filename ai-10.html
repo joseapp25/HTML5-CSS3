@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Japanese Reader</title>
+  <style>
+    body {
+      font-size: 1.5rem;
+      line-height: 2;
+      padding: 20px;
+      background-color: #fdfdfd;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .furigana-hidden rt {
+      visibility: hidden;
+    }
+
+    button {
+      margin-bottom: 20px;
+      padding: 10px 15px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="toggleFurigana()">Toggle Furigana</button>
+
+  <div id="text-container" class="furigana-hidden">
+    <p>
+      <ruby>佐<rt>さ</rt>藤<rt>とう</rt></ruby>：<ruby>初<rt>はじ</rt></ruby>めまして、<ruby>佐<rt>さ</rt>藤<rt>とう</rt></ruby>です。<br>
+      <ruby>鈴<rt>すず</rt>木<rt>き</rt></ruby>：<ruby>初<rt>はじ</rt></ruby>めまして、<ruby>鈴<rt>すず</rt>木<rt>き</rt></ruby>です。<br>
+      <ruby>佐<rt>さ</rt>藤<rt>とう</rt></ruby>：よろしく<ruby>お願<rt>ねが</rt></ruby>いします。<br>
+      <ruby>鈴<rt>すず</rt>木<rt>き</rt></ruby>：こちらこそよろしく<ruby>お願<rt>ねが</rt></ruby>いします。
+    </p>
+  </div>
+
+  <script>
+    function toggleFurigana() {
+      const container = document.getElementById('text-container');
+      container.classList.toggle('furigana-hidden');
+    }
+  </script>
+
+</body>
+</html>
